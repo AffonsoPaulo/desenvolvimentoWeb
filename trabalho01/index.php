@@ -1,17 +1,22 @@
 <?php
 # Escrever na Página
-    echo "Oi!";
+    echo "Oi! </br>";
 
 # Inserindo variáveis
 
 $nomeDaVar = "Variavel";
+echo "${nomeDaVar} </br>";
 
 # Tipos de dados
 
 $numInt = 40;
+echo "${numInt} </br>";
 $numFloat = 1.99;
+echo "${numFloat} </br>";
 $numBool = true;
+echo "${numBool} </br>";
 $charString = "Texto";
+echo "${charString} </br>";
 
 # Caracteres de controle
 
@@ -20,9 +25,13 @@ $textCarriage = "Pula\r";
 $textTAB = "TAB\t.";
 
 $printBackslash = "\\";
+echo "${printBackslash} </br>";
 $printDollar = "\$";
+echo "${printDollar} </br>";
 $printApostrophe = '\'';
+echo "${printApostrophe} </br>";
 $printBackslash = "\"";
+echo "${printBackslash} </br>";
 
 # Variáveis na String
 
@@ -39,7 +48,7 @@ void exit (int $status); */
 
 # Conversão de tipos 
 $numAux = 40;
-
+echo "${numAux} </br>";
 $numAux = (float) $numAux;
 $numAux = (string) $numAux;
 $numAux = (bool) $numAux;
@@ -86,7 +95,7 @@ $variable = 40;
 
 switch ($variable) {
     case 40:
-        echo "Oi";
+        echo "Oi </br>";
         # code...
         break;
     
@@ -95,4 +104,6 @@ switch ($variable) {
         # code...
         break;
 }
+
+echo "PARA ENTENDER, OLHE O ARQUIVO <b>INDEX.PHP</b>"
 ?>
