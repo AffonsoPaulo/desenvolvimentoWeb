@@ -1,3 +1,11 @@
-* {
- margin: 0;
+.card {
+	display: block;
+}
+.inputTitles {
+	margin-top: 2rem;
+	display: block;
+}
+
+form {
+
 }
