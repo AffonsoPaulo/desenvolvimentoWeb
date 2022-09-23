@@ -1,4 +1,35 @@
-main {
+body {
 	background-color: #181A1B;
 	color: #E8E6E3;
+}
+
+.card-name {
+	text-align: center;
+	background-color: #000;
+	width: 25rem;
+	margin: 0 auto 2rem auto;
+	padding: 1rem;
+	border-radius: 25px;
+}
+
+.card {
+	text-align: center;
+	background-color: #000;
+	width: 25rem;
+	margin: 0 auto 2rem auto;
+	padding: 1rem;
+	border-radius: 25px;
+}
+
+.card-flex {
+	display: flex;
+	justify-content: space-between;
+}
+
+main {
+	margin: 50px 200px;
+}
+
+p {
+	display: block;
 }

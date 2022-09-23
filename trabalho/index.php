@@ -10,65 +10,63 @@
 </head>
 <body>
 <main>
-    <form id="formData" name="formData" method="post" action="receive.php">
-        <h1>Dados Pessoais:</h1>
-        <div class="card">
-        <label class="inputTitles" for="formName">Nome: </label>
-        <input id="formName" name="formName" type="text">
-        </div>
+    <div class="card-name">
+        <form id="formData" name="formData" method="post" action="receive.php">
+            <h1>Dados Pessoais:</h1>
+            <div class="card-flex">
+                <div class="card">
+                    <label class="inputTitles" for="formName">Nome: </label>
+                    <input id="formName" name="formName" type="text">
 
-        <div class="card">
-        <label class="inputTitles" for="formCivil">Estado Civil: </label>
-        <select id="formCivil" name="formCivil">
-            <option>Solteiro</option>
-            <option>Casado</option>
-            <option>União Estável</option>
-            <option>Viúvo</option>
-            <option>Divorciado</option>
-            <option>Separado</option>
-        </select>
-        </div>
+                    <label class="inputTitles" for="formCivil">Estado Civil: </label>
+                    <select id="formCivil" name="formCivil">
+                        <option>Solteiro</option>
+                        <option>Casado</option>
+                        <option>União Estável</option>
+                        <option>Viúvo</option>
+                        <option>Divorciado</option>
+                        <option>Separado</option>
+                    </select>
 
-        <div class="card">
-        <label class="inputTitles" for="formAge">Idade: </label>
-        <input id="formAge" name="formAge" type="number">
-        </div>
+                    <label class="inputTitles" for="formAge">Idade: </label>
+                    <input id="formAge" name="formAge" type="number">
 
-        <div class="card">
-        <label class="inputTitles" for="formEmail">E-mail: </label>
-        <input id="formEmail" name="formEmail" type="email">
-        </div>
+                    <label class="inputTitles" for="formEmail">E-mail: </label>
+                    <input id="formEmail" name="formEmail" type="email">
 
-        <div class="card">
-        <label class="inputTitles" for="formTel">Telefone: </label>
-        <input id="formTel" name="formTel" type="tel" maxlength="15"
-               placeholder="(22) 99999-9999">
-        </div>
+                    <label class="inputTitles" for="formTel">Telefone: </label>
+                    <input id="formTel" name="formTel" type="tel" maxlength="15"
+                           placeholder="(22) 99999-9999">
+                </div>
 
-        <div class="card">
-        <label class="inputTitles" for="formAboutMe">Sobre mim: </label>
-        <input id="formAboutMe" name="formAboutMe" type="text">
-        </div>
+                <div class="card">
+                    <label class="inputTitles" for="formAboutMe">Sobre mim: </label>
+                    <input id="formAboutMe" name="formAboutMe" type="text">
+                </div>
+            </div>
+            <div class="card-flex">
+                <div class="card">
+                    <label class="inputTitles" for="formSchool">Formação Acadêmica: </label>
+                    <input id="formSchool" name="formSchool" type="text">
+                </div>
 
-        <div class="card">
-        <label class="inputTitles" for="formSchool">Formação Acadêmica: </label>
-        <input id="formSchool" name="formSchool" type="text">
-        </div>
+                <div class="card">
+                    <label class="inputTitles" for="formGoals">Objetivos: </label>
+                    <input id="formGoals" name="formGoals" type="text">
+                </div>
+            </div>
+            <div class="card-flex">
+                <div class="card">
+                    <label class="inputTitles" for="formLang">Idiomas: </label>
+                    <input id="formLang" name="formLang" type="text">
+                </div>
 
-        <div class="card">
-        <label class="inputTitles" for="formGoals">Objetivos: </label>
-        <input id="formGoals" name="formGoals" type="text">
-        </div>
-
-        <div class="card">
-        <label class="inputTitles" for="formLang">Idiomas: </label>
-        <input id="formLang" name="formLang" type="text">
-        </div>
-
-        <div class="card">
-        <input id="formSubmit" name="formSubmit" type="submit" value="Submit">
-        </div>
-    </form>
+                <div class="card">
+                    <input id="formSubmit" name="formSubmit" type="submit" value="Submit">
+                </div>
+            </div>
+        </form>
+    </div>
 </main>
 </body>
 </html>
