@@ -8,10 +8,8 @@ window.onload = function () {
 function buscarFilme(id) {
     fetch("../controller/filmeBuscar.php?id=" + id + "")
         .then(function (response) {
-            if(response.ok !== true) {
-                let msg = response.status + " - " + response.statusText
-                document.querySelector('#msgErro').textContent = msg
-            } else return response.json()
+            if(response.ok !== true) document.querySelector('#msgErro').textContent = response.status + " - " + response.statusText
+            else return response.json()
         })
         .then(function (responseJSON) {
             if(responseJSON.erro === false) cbSucessoBuscarFilme(responseJSON)
@@ -36,10 +34,8 @@ function cbSucessoBuscarFilme(responseJSON) {
 function buscarePosicionarGeneros(idGeneroAtual) {
     fetch("../controller/generoListar.php")
         .then(function (response) {
-            if(response.ok !== true) {
-                let msg = response.status + " - " + response.statusText
-                document.querySelector('#msgErro').textContent = msg
-            } else return response.json()
+            if(response.ok !== true) document.querySelector('#msgErro').textContent = response.status + " - " + response.statusText
+            else return response.json()
         })
         .then(function (responseJSON) {
             if(responseJSON.erro === false) {
@@ -66,7 +62,7 @@ function montarSelectGeneros(generos, idGeneroAtual) {
         let genero = generos[i]
         let $opt = document.createElement('option')
         $opt.value = genero.id
-        if(genero.id == idGeneroAtual) $opt.setAttribute('selected', 'selected')
+        if(genero.id === idGeneroAtual) $opt.setAttribute('selected', 'selected')
         $opt.textContent = genero.descricao
         document.querySelector('#cmbGeneros').appendChild($opt)
     }
