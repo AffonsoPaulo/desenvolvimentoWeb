@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular Media</title>
+</head>
+<body>
+    <head>
+        <h2>Cálculo da média</h2>
+        <hr>
+    </head>
+    <main>
+        <span id="erro" style="color: red;"></span>
+        <form id="formMedia" action="#">
+            <label for="nome">Aluno: </label>
+            <input id="nome" name="nome" type="text" required/>
+            <label for="nota1">Nota 1: </label>
+            <input type="number" min="0" max="10" step="0.01" id="nota1" name="nota1" />
+            <label for="nota2">Nota 2: </label>
+            <input type="number" min="0" max="10" step="0.01" id="nota2" name="nota2" />
+
+            <input id="btnEnviar" type="submit" value="calcular">
+        </form>
+        <hr>
+        <h3 id="dados"></h3>
+        <span id="alunoNome"></span> <br/>
+        <span id="alunoMedia"></span> <br/>
+        <span id="alunoGrau"></span>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="fetch.js"></script>
+</body>
+</html>
