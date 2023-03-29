@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Listagem de Filmes</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="bibliotecas/cssModal/bootstrap.min.css">
+    <link rel="stylesheet" href="bibliotecas/font-awesome/css/font-awesome.css">
+    <script src="bibliotecas/jsModal/jquery-3.5.1.min.js"></script>
+    <script src="bibliotecas/jsModal/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="estilo/estilo.css" />
+</head>
+<body>
+    <nav>
+        <ul class="menu">
+            <li>
+                <button id="btn-home-jquery" class="btn btn-primary btn-sm">
+                    <i class="fa fa-home" aria-hidden="true"></i>
+                    &nbsp;Home
+                </button>
+            </li>
+            <li>
+                <button id="btn-novo-jquery" class="btn btn-primary btn-sm">
+                    <i class="fa fa-user-plus" aria-hidden="true"></i>
+                    &nbsp;&nbsp;Inserir novo gênero
+                </button>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <h2 class="titulo">Lista de Generos</h2>
+        <hr/>
+        <div id="erro">
+            <span id="msgErro"></span> <!--Exibição em vermelho-->
+            <span id="msgSucesso"></span> <!--Exibição em azul-->
+        </div> 
+        <table id="tblGeneros">
+        <thead>
+            <tr><th>ID</th><th>DESCRICAO</th><th>AÇÕES</th></tr>
+        </thead>
+        <tbody>    
+            <!-- Aqui a tabela vai ser renderizada -->
+        </tbody>
+        </table>
+        <br/>
+
+        <div class="modal fade" id="modal-formulario" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="form-titulo">Novo Gênero </h4>
+                        <button type="button" class="close" data-dismiss="modal"><span>X</span></button>
+                    </div>
+                    <div class="modal-body" id="formulario" style="background-color: lightgrey;">
+                        <form id="form-inserir">
+                            <input type="hidden" name="id">
+                            Título: <input type="text" name="descricao" id="descricao">
+                            <input type="submit" value="Enviar" id="enviar">
+                            <input type="reset" value="Limpar">
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" id="btn-fechar-jquery" class="btn btn-danger btn-sm">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="modal-formulario-alterar" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="form-titulo">Alterar genero existente </h4>
+                        <button type="button" class="close" data-dismiss="modal"><span>X</span></button>
+                    </div>
+                    <div class="modal-body" id="formulario" style="background-color: lightgrey;">
+                        <form id="form-alterar">
+                            ID: <input text="text" size="2" name="id" id="id" readonly>
+                            Descrição: <input type="text" name="descricao" id="descricao">
+                            <input type="submit" value="Alterar" id="alterar">
+                            <input type="reset" value="Cancelar" id="cancelar">
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" id="btn-fechar-jquery-alterar" class="btn btn-danger btn-sm">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <hr/>
+        Todos os direitos reservados
+    </footer>
+    <script>
+        $("#btn-novo-jquery").click(function() {
+            $("#modal-formulario").modal({backdrop: 'static'});
+            $("#modal-formulario").modal('show');
+        });
+        $("#btn-fechar-jquery").click(function() {
+            $("#modal-formulario").modal({backdrop: 'static'});
+            $("#modal-formulario").modal('hide');
+        });
+        $("#btn-fechar-jquery-alterar").click(function() {
+            $("#modal-formulario-alterar").modal({backdrop: 'static'});
+            $("#modal-formulario-alterar").modal('hide');
+        })
+        $("#btn-home-jquery").click(function() {
+            window.location.href = "index.html";
+        })
+    </script>
+    <script src="generosJs/buscar.js"></script>
+    <script src="generosJs/excluir.js"></script>
+    <script src="generosJs/listar.js"></script>
+    <script src="generosJs/inserir.js"></script>
+    <script src="generosJs/alterar.js"></script>
+</body>
+</html>

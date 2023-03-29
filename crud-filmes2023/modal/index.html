@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<!-- bootstrap v3.4.1 -->
+	<link rel="stylesheet" type="text/css" href="bibliotecas/modal/cssModal/bootstrap.min.css">
+	<!-- fontawesome v5.15.1 https://fontawesome.com/v5.15.1/icons?d=listing -->
+	<link rel="stylesheet" type="text/css" href="bibliotecas/font-awesome/css/font-awesome.css">
+	<script src="bibliotecas/modal/jsModal/jquery-3.5.1.min.js"></script>
+	<script src="bibliotecas/modal/jsModal/bootstrap.min.js"></script>
+	<title>Teste Modal</title>
+	
+</head>
+<body>
+	<div class="col-md-11 col-md-offset-0.5">
+    	<h3>Registros 
+      		<!-- <button id="btn-novo" class="btn btn-primary btn-sm" data-toggle="modal" 
+				data-target="#modal-formulario" 
+      		><i class="fa fa-user-plus" aria-hidden="true"></i>&nbsp;Novo botão</button> -->
+      		<button id="btn-novo-jquery" class="btn btn-primary btn-sm"  
+      		><i class="fa fa-user-plus" aria-hidden="true"></i>&nbsp;Novo botão (via jquery)</button>
+    	</h3>
+  	</div>
+
+	<div class="modal fade" id="modal-formulario" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title" id="form-titulo">Novo Registro </h4>
+					<button type="button" class="close" data-dismiss="modal"><span>x</span></button>
+				</div>
+				<div class="modal-body" id="formulario">
+					<!-- AQUI FICARÁ O FORMULÁRIO -->
+					<!-- FIM DO FORMULÁRIO --> 
+					Dados do formulário
+					<span id="mensagem"></span>
+				</div>
+				<div class="modal-footer">
+					<!-- <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">Fechar</button>-->
+					<button type="button" id="btn-fechar-jquery" class="btn btn-danger btn-sm">Fechar</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+    <script>
+		$("#btn-novo-jquery").click(function(){
+    		$("#modal-formulario").modal({backdrop: 'static'});
+			$("#modal-formulario").modal('show');
+		});
+		$("#btn-fechar-jquery").click(function(){
+    		$("#modal-formulario").modal({backdrop: 'static'});
+			$("#modal-formulario").modal('hide');
+		});
+    </script>
+</body>
+</html>
